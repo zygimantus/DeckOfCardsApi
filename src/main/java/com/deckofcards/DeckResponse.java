@@ -9,16 +9,16 @@ import java.util.List;
  */
 public class DeckResponse {
 
-    public boolean success;
+    private boolean success;
 
     @SerializedName("deck_id")
-    public String deckId;
+    private String deckId;
 
-    public int remaining;
+    private int remaining;
 
-    public boolean shuffled;
+    private boolean shuffled;
 
-    public List<Card> cards;
+    private List<Card> cards;
 
     public static class Card {
 
@@ -30,4 +30,45 @@ public class DeckResponse {
             this.id = id;
         }
     }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getDeckId() {
+        return deckId;
+    }
+
+    public void setDeckId(String deckId) {
+        this.deckId = deckId;
+    }
+
+    public int getRemaining() {
+        return remaining;
+    }
+
+    public void setRemaining(int remaining) {
+        this.remaining = remaining;
+    }
+
+    public boolean isShuffled() {
+        return shuffled;
+    }
+
+    public void setShuffled(boolean shuffled) {
+        this.shuffled = shuffled;
+    }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
+    }
+
 }
